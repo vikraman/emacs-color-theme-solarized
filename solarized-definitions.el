@@ -641,7 +641,21 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (term-color-blue (,@fg-blue))
                 (term-color-magenta (,@fg-magenta))
                 (term-color-cyan (,@fg-cyan))
-                (term-color-white (,@fg-base00)))))))
+                (term-color-white (,@fg-base00))
+                ;; company
+                (company-preview (,@fg-base00))
+                (company-preview-common (:inherit company-preview ,@fg-yellow))
+                (company-preview-search (:inherit company-preview ,@fg-blue))
+                (company-tooltip (,@bg-base03))
+                (company-tooltip-selection (,@bg-base02))
+                (company-tooltip-common (:inherit company-tooltip ,@fg-yellow))
+                (company-tooltip-common-selection (:inherit company-tooltip-selection ,@fg-yellow))
+                (company-tooltip-search (:inherit company-tooltip ,@fg-blue))
+                (company-tooltip-annotation (:inherit company-tooltip ,@fg-green))
+                (company-scrollbar-bg (:inherit 'company-tooltip ,@bg-base02))
+                (company-scrollbar-fg (,@bg-base03))
+                (company-echo-common (:inherit company-echo ,@fg-yellow))
+                )))))
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)
