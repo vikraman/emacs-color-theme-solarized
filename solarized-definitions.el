@@ -557,6 +557,15 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                  (,@fmt-none ,@fg-blue))
                 (gnus-summary-selected ; indicator
                  (,@fmt-none ,@fg-base03 ,@bg-yellow))
+                ;;magit next branch
+                (magit-diff-added (,@bg-back ,@fg-green))
+                (magit-diff-removed (,@bg-back ,@fg-red))
+                (magit-diff-context (,@bg-back ,@fg-base1))
+                (magit-diff-added-highlight (,@bg-base02 ,@fg-green))
+                (magit-diff-removed-highlight (,@bg-base02 ,@fg-red))
+                (magit-diff-context-highlight (,@bg-base02 ,@fg-base1))
+                (magit-hunk-heading (,@bg-base03 ,@fg-base1))
+                (magit-section-highlight (,@bg-base02))
                 ;; Message
                 (message-mml (,@fg-blue))
                 (message-cited-text (,@fg-base2))
